@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = "/api/projects";
+const BASE_URL = "https://server-dixit-portfolio.onrender.com/api/projects";
 
 export const fetchProjects = async () => {
   try {
@@ -19,7 +19,7 @@ export const fetchProjects = async () => {
 
 export const fetchProjectsById = async (id) => {
   try {
-    const response = await axios.get(`/api/project/${id}`)
+    const response = await axios.get(`https://server-dixit-portfolio.onrender.com/api/project/${id}`)
     
     return response.data
   } catch (error) {
