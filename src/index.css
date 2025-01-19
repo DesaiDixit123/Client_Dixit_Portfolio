@@ -1,0 +1,19 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active{
+    color: blue;
+
+}
+
+
+body{
+  @apply bg-gradient-to-b from-gray-100 to-gray-200
+}
+
+/* .btn1{
+  background: linear-gradient(4deg, rgba(42,51,134,1) 36%, rgba(0,101,154,1) 100%);
+} */
