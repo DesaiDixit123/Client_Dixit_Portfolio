@@ -131,10 +131,10 @@ export const BackgroundHome = () => {
 
     return (
         <>
-            <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-8 h-auto lg:h-[85vh] space-y-8 lg:space-y-0">
+            <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-8 h-auto lg:h-[85vh] space-y-8 lg:space-y-0 ">
                 {/* Text Section */}
                 <motion.div
-                    className="flex flex-col items-start w-full lg:w-[60%] space-y-4"
+                    className="flex flex-col items-start w-full lg:w-[60%] space-y-4 pt-[50px]"
                     whileInView={{
                         opacity: [0, 1],
                         x: [-50, 0],
