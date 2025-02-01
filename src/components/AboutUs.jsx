@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profileImage from "../assets/Dixit.png";
+import profileImage from "../assets/Dixit_Background-removebg-preview - Copy.png";
 
 export default function AboutUs() {
   return (
@@ -11,13 +11,14 @@ export default function AboutUs() {
         transition={{ duration: 0.8 }}
       >
         {/* Left Side - Profile Image */}
-        <div className="md:w-1/3 w-full h-64 md:h-auto">
-          <img
-            src={profileImage}
-            alt="Dixit Desai"
-            className="object-cover w-full h-full"
-          />
-        </div>
+        <div className="md:w-1/3 w-full h-64 md:h-auto p-4 flex items-center justify-center">
+  <img
+    src={profileImage}
+    alt="Dixit Desai"
+    className="object-cover w-full h-full rounded-lg"
+  />
+</div>
+
 
         {/* Right Side - About Content */}
         <div className="md:w-2/3 w-full p-6 sm:p-8">

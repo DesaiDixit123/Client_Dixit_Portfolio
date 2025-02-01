@@ -11,9 +11,16 @@
 
 
 body{
-  @apply bg-gradient-to-b from-gray-100 to-gray-200
+  @apply bg-gradient-to-r from-[#ffffff] to-[#f8f9fa]
 }
 
 /* .btn1{
   background: linear-gradient(4deg, rgba(42,51,134,1) 36%, rgba(0,101,154,1) 100%);
 } */
+
+
+.google-font{
+  font-family: "Inter Tight", serif;
+}
+
+

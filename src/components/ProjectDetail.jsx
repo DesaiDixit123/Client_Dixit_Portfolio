@@ -67,14 +67,25 @@ export default function ProjectDetail() {
                 >
                     {project.description}
                 </motion.p>
+                <div className="">
+
                 <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700"
-                >
+                    >
                     View on GitHub
                 </a>
+                <a
+                    href={project.previewLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 pl-[20px]"
+                >
+                   Preview
+                </a>
+                    </div>
             </div>
         </div>
     );

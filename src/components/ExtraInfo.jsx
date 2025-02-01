@@ -21,7 +21,7 @@ export default function ExtraInfo() {
                     <p>I am Dixit Desai, a passionate Full Stack Developer with over 1+ year of experience in web development. I specialize in building dynamic and responsive web applications using the MERN stack (MongoDB, Express.js, React, Node.js).</p>
                 </div>
                 {/* Add About specific details */}
-                <div className="py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 px-4">
+                <div className="py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 px-4">
                     {/* Email */}
                     <div className="group bg-white w-full h-[120px] flex flex-col justify-center px-6 rounded-lg border-2 border-transparent hover:bg-gradient-to-r hover:from-[#2A3386] hover:to-[#00659A] p-1 transition-all duration-300 hover:shadow-lg">
                         <h3 className="font-bold text-lg text-black group-hover:text-white transition-all duration-300">Email</h3>
@@ -109,7 +109,7 @@ export default function ExtraInfo() {
                     <p>Here's a brief overview of my education background:</p>
                 </div>
 
-                <div className="py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+                <div className="py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 px-4">
                     {/* 10th Education */}
                     <div className="group bg-white w-full h-auto flex flex-col justify-center px-6 py-4 rounded-lg border-2 border-transparent hover:bg-gradient-to-r hover:from-[#2A3386] hover:to-[#00659A] p-1 transition-all duration-300 hover:shadow-lg">
                         <h3 className="font-bold text-lg text-black group-hover:text-white transition-all duration-300">
@@ -191,7 +191,7 @@ export default function ExtraInfo() {
 
     return (
         <>
-            <div className="h-full py-[50px]">
+            <div className="h-full py-[50px] bg-gray-200">
 
                 <div className="flex justify-center py-[30px] gap-[40px] flex-wrap">
                     {['about', 'experience', 'education', 'skills'].map((section) => (

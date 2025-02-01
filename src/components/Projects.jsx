@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { fetchProjects } from "./api/projectsApi";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import CardActions from "@mui/material/CardActions";
 import { useNavigate } from "react-router-dom";
-// import Box from '@mui/joy/Box';
-// import List from '@mui/joy/List';
-// import ListItem from '@mui/joy/ListItem';
-// import ListItemDecorator from '@mui/joy/ListItemDecorator';
-// import ListItemButton from '@mui/joy/ListItemButton';
-// import Typography from '@mui/joy/Typography';
-// import Home from '@mui/icons-material/Home';
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
-    const navigate = useNavigate();
+    const navigate=useNavigate()
+
     useEffect(() => {
-        const getProducts = async () => {
+        const getProjects = async () => {
             try {
                 const response = await fetchProjects();
                 if (response && response.data) {
@@ -27,7 +27,7 @@ export default function Projects() {
             }
         };
 
-        getProducts();
+        getProjects();
     }, []);
 
     const truncateText = (text, wordLimit) => {
@@ -39,11 +39,25 @@ export default function Projects() {
         return text;
     };
 
-    const handleNavigate = (projectId) => {
-        navigate(`/project/${projectId}`);
+    const handlePreview = (previewUrl) => {
+        if (previewUrl) {
+            window.open(previewUrl, "_blank");
+        } else {
+            alert("Preview link not available!");
+        }
     };
 
-
+    const handleGitHub = (githubLink) => {
+        if (githubLink) {
+            window.open(githubLink, "_blank");
+        } else {
+            alert("GitHub link not available!");
+        }
+    };
+    // const handleImageClick = (projectId) => {
+    //     // Navigate to the project details page with the project ID
+    //     navigate(`/project/${projectId}`);
+    // };
     return (
         <>
             <motion.div
@@ -55,109 +69,52 @@ export default function Projects() {
                 <h1>My Creative Projects</h1>
             </motion.div>
 
-            {/* <div className="flex"> */}
-                {/* <div className="fixed top-20 left-0 h-full w-64 overflow-y-auto py-[120px]">
-                    <Box
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8 py-10 overflow-y-auto">
+                {projects.map((project) => (
+                    <Card
+                        key={project._id}
                         sx={{
-                            flexGrow: 1,
-                            display: 'flex',
-                            justifyContent: 'center',
-                            gap: 2,
-                            flexWrap: 'wrap',
-                            '& > *': { minWidth: 0, flexBasis: 200 },
+                            maxWidth: 345,
+                            margin: "auto",
+                            boxShadow: "0px 4px 10px rgba(42, 51, 134, 0.5), 0px 4px 10px rgba(0, 101, 154, 0.5)",
+                            borderRadius: "10px",
+                            transition: "box-shadow 0.3s ease-in-out", // Smooth transition for box shadow
+                            '&:hover': {
+                                boxShadow: "0px 8px 20px rgba(42, 51, 134, 0.7), 0px 8px 20px rgba(0, 101, 154, 0.7)",
+                            },
                         }}
                     >
-                        <div>
-                           
-                            <List
-                                size="md"
-                                variant="outlined"
-                                sx={{ maxWidth: 300, borderRadius: 'sm' }}
-                            >
-                                <ListItem>
-                                    <ListItemButton>
-                                        <ListItemDecorator>
-                                            <Home />
-                                        </ListItemDecorator>
-                                        Home
-                                    </ListItemButton>
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemButton>Projects</ListItemButton>
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemButton>Settings</ListItemButton>
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemButton>Projects</ListItemButton>
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemButton>Settings</ListItemButton>
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemButton>Projects</ListItemButton>
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemButton>Settings</ListItemButton>
-                                </ListItem>
-                            </List>
-                        </div>
-                    </Box>
-                </div> */}
-
-                <motion.div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8 py-10 overflow-y-auto">
-                    {projects.map((project, index) => (
-                        <motion.div
-                            key={project._id}
-                            className="w-full bg-white border-2 border-gray-300 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            whileInView={{
-                                opacity: [0, 1],
-                                x: index % 2 === 0 ? [-50, 0] : [50, 0],
-                                y: [-20, 0],
+                        <CardMedia
+                            component="img"
+                            height="80"
+                            image={project.image1}
+                            alt={project.title}
+                            sx={{
+                                borderRadius: "8px", // Add border radius around the image
+                                padding: "5px",
+                                // Add padding inside the image container
                             }}
-                            transition={{
-                                opacity: { duration: 0.5 },
-                                x: { duration: 0.7 },
-                                y: { duration: 0.7 },
-                            }}
-                            viewport={{ once: false, amount: 0.2 }}
-                            onClick={() => handleNavigate(project._id)}
-                        >
-                            <div className="relative p-3">
-                                <motion.img
-                                    src={project.image1}
-                                    alt={project.title}
-                                    className="w-full h-48 object-cover rounded-lg border-2 border-gray-300"
-                                    initial={{ scale: 0.9, opacity: 0 }}
-                                    animate={{ scale: 1, opacity: 1 }}
-                                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                                />
-                            </div>
-                            <motion.p className="text-[16px] text-gray-600 mt-2 text-end pr-[15px]">
-                                {project.projectLanguage}
-                            </motion.p>
-                            <div className="p-5">
-                                <motion.h1 className="text-[22px] font-bold bg-gradient-to-r from-[#2A3386] to-[#00659A] text-transparent bg-clip-text">
-                                    {truncateText(project.title, 6)}
-                                </motion.h1>
-                                <motion.p className="text-[16px] text-gray-600 mt-2">
-                                    {truncateText(project.description, 10)}
-                                </motion.p>
-                                <motion.a
-                                    href={project.githubLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-block mt-4 text-blue-500 font-semibold hover:underline"
-                                >
-                                    View on GitHub
-                                </motion.a>
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
-            {/* </div> */}
+                            // onClick={() => handleImageClick(project._id)}
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h6" component="div">
+                                {truncateText(project.title, 6)}
+                            </Typography>
+                            <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                                {truncateText(project.description, 10)}
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small" color="primary" onClick={() => handleGitHub(project.githubLink)}>
+                                GitHub
+                            </Button>
+                            <Button size="small" color="secondary" onClick={() => handlePreview(project.previewLink)}>
+                                Preview
+                            </Button>
+                        </CardActions>
+                    </Card>
+                ))}
+            </div>
         </>
     );
 }
