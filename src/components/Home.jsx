@@ -32,7 +32,7 @@ export const BackgroundHome = () => {
     const [titleIndex, setTitleIndex] = useState(0);
 
     const titles = [
-        "MERN Stack Developer",
+        "PHP Laravel & MERN Stack Developer",
         "Python Django Developer",
         "React JS Developer",
         "Full Stack Developer",
@@ -85,7 +85,7 @@ export const BackgroundHome = () => {
                     </div>
 
                     <p data-aos="fade-up" data-aos-delay="600" className="text-sm md:text-base text-gray-400 max-w-xl leading-relaxed mt-4">
-                        Transforming complex requirements into seamless, high-performance web applications using the MERN stack. Engineering robust, scalable, and secure backend solutions powered by Python and the Django ecosystem. Designing pixel-perfect, interactive frontend experiences with React. Mastering the full development lifecycle to build end-to-end digital products that drive business value.
+                        Transforming complex requirements into seamless, high-performance web applications using the PHP Laravel and MERN stack. Engineering robust, scalable, and secure backend solutions powered by Python and the Django ecosystem. Designing pixel-perfect, interactive frontend experiences with React. Mastering the full development lifecycle to build end-to-end digital products that drive business value.
                     </p>
 
                     <div data-aos="fade-up" data-aos-delay="800" className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center lg:justify-start">

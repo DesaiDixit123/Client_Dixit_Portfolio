@@ -1,31 +1,27 @@
-import axios from "axios";
+import projectsData from "../../data/projects.json";
 
 
 const BASE_URL = "/api/projects";
 
 export const fetchProjects = async () => {
   try {
-    const response = await axios.get(BASE_URL);
-
-      
-      console.log(response.data)
-    return response.data; // Return fetched data
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+    return { data: projectsData }; 
   } catch (error) {
     console.error("Error fetching projects:", error);
-    throw error; // Rethrow the error for handling in the component
+    throw error;
   }
 };
 
 
 export const fetchProjectsById = async (id) => {
   try {
-    const response = await axios.get(`/api/project/${id}`)
-    
-    return response.data
+    await new Promise(resolve => setTimeout(resolve, 500));
+    const project = projectsData.find(p => p._id === id);
+    return { data: project };
   } catch (error) {
-
-    console.log("Error Fetching Projects By Id",error)
-    return null
-    
+    console.log("Error Fetching Projects By Id", error);
+    return null;
   }
-}
+};

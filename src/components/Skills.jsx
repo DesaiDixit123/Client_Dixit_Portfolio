@@ -1,65 +1,45 @@
 import React from 'react';
+import { useLocation } from "react-router-dom";
 import { FaReact, FaNodeJs, FaPython, FaDatabase, FaDocker, FaGitAlt } from 'react-icons/fa';
 import { SiTailwindcss, SiDjango, SiMongodb, SiTypescript, SiNextdotjs, SiJavascript } from 'react-icons/si';
-import { useLocation } from "react-router-dom";
-import Services from "./Services";
+import skillsData from "../data/skills.json";
+
+
+const IconComponent = ({ name, color }) => {
+    const icons = {
+        FaReact: <FaReact className={name === "React" ? "text-[#61DAFB]" : "text-3xl text-cyan-400"} style={{ color: name === "React" ? color : undefined }} />,
+        FaNodeJs: <FaNodeJs className={name === "Node.js" ? "text-[#339933]" : "text-3xl text-green-500"} style={{ color: name === "Node.js" ? color : undefined }} />,
+        FaPython: <FaPython style={{ color }} />,
+        FaDatabase: <FaDatabase className={!color ? "text-3xl text-purple-500" : ""} style={{ color }} />,
+        FaDocker: <FaDocker style={{ color }} />,
+        FaGitAlt: <FaGitAlt style={{ color }} />,
+        SiTailwindcss: <SiTailwindcss style={{ color }} />,
+        SiDjango: <SiDjango style={{ color }} />,
+        SiMongodb: <SiMongodb style={{ color }} />,
+        SiTypescript: <SiTypescript style={{ color }} />,
+        SiNextdotjs: <SiNextdotjs style={{ color }} />,
+        SiJavascript: <SiJavascript style={{ color }} />,
+        ExpressIcon: <div className="font-bold text-gray-400">ex</div>,
+        RestIcon: <div className="font-bold text-blue-400">{'{ }'}</div>,
+        AwsIcon: <div className="font-bold text-[#FF9900]">AWS</div>,
+    };
+    return icons[name] || null;
+};
 
 export default function Skills() {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
-    const skillCategories = [
-        {
-            title: "Frontend Development",
-            icon: <FaReact className="text-3xl text-cyan-400" />,
-            skills: [
-                { name: "React", icon: <FaReact className="text-[#61DAFB]" />, level: 95 },
-                { name: "Next.js", icon: <SiNextdotjs className="text-white" />, level: 85 },
-                { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" />, level: 92 },
-                { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" />, level: 80 },
-                { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" />, level: 95 },
-            ]
-        },
-        {
-            title: "Backend Development",
-            icon: <FaNodeJs className="text-3xl text-green-500" />,
-            skills: [
-                { name: "Node.js", icon: <FaNodeJs className="text-[#339933]" />, level: 90 },
-                { name: "Python", icon: <FaPython className="text-[#3776AB]" />, level: 85 },
-                { name: "Django", icon: <SiDjango className="text-[#092E20]" />, level: 80 },
-                { name: "Express", icon: <div className="font-bold text-gray-400">ex</div>, level: 88 },
-                { name: "REST APIs", icon: <div className="font-bold text-blue-400">{'{ }'}</div>, level: 92 },
-            ]
-        },
-        {
-            title: "Database & Cloud",
-            icon: <FaDatabase className="text-3xl text-purple-500" />,
-            skills: [
-                { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" />, level: 85 },
-                { name: "PostgreSQL", icon: <FaDatabase className="text-[#4169E1]" />, level: 80 },
-                { name: "MySQL", icon: <FaDatabase className="text-[#4479A1]" />, level: 85 },
-                { name: "AWS", icon: <div className="font-bold text-[#FF9900]">AWS</div>, level: 75 },
-                { name: "Docker", icon: <FaDocker className="text-[#2496ED]" />, level: 70 },
-            ]
-        }
-    ];
+    
+    const skillCategories = skillsData.skillCategories.map(category => ({
+        ...category,
+        icon: <IconComponent name={category.icon} />,
+        skills: category.skills.map(skill => ({
+            ...skill,
+            icon: <IconComponent name={skill.icon} color={skill.color} />
+        }))
+    }));
 
-    const displaySkills = [
-        { name: "React", level: 95 },
-        { name: "Next.js", level: 85 },
-        { name: "JavaScript", level: 92 },
-        { name: "TypeScript", level: 80 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "Django", level: 80 },
-        { name: "Express", level: 88 },
-        { name: "REST APIs", level: 92 },
-        { name: "MongoDB", level: 85 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MySQL", level: 85 },
-        { name: "AWS", level: 75 },
-        { name: "Docker", level: 70 },
-    ];
+    const displaySkills = skillsData.displaySkills;
 
     return (
         <section className={`w-full relative z-10 overflow-hidden ${isHomePage ? "py-20 bg-[#030014]" : "pt-32 pb-20 bg-[#030014]"}`}>

@@ -1,48 +1,24 @@
 import React from 'react';
-import { FiMonitor, FiServer, FiLayers, FiActivity, FiDatabase, FiLock } from 'react-icons/fi';
 import { useLocation } from "react-router-dom";
+import { FiMonitor, FiServer, FiLayers, FiActivity, FiDatabase, FiLock } from 'react-icons/fi';
+import servicesData from "../data/services.json";
+
+const iconMap = {
+    FiMonitor: <FiMonitor className="text-4xl text-cyan-400" />,
+    FiServer: <FiServer className="text-4xl text-blue-500" />,
+    FiLayers: <FiLayers className="text-4xl text-purple-500" />,
+    FiDatabase: <FiDatabase className="text-4xl text-green-400" />,
+    FiActivity: <FiActivity className="text-4xl text-yellow-400" />,
+    FiLock: <FiLock className="text-4xl text-red-500" />,
+};
 
 export default function Services({ isEmbedded = false }) {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
-    const services = [
-        {
-            icon: <FiMonitor className="text-4xl text-cyan-400" />,
-            title: "Frontend Development",
-            description: "Crafting pixel-perfect, responsive, and highly interactive user interfaces using modern frameworks like React and Next.js. I focus on accessibility, performance, and seamless animations to deliver exceptional digital experiences.",
-            features: ["React & Next.js", "Tailwind CSS", "Framer Motion & AOS", "Responsive Design"]
-        },
-        {
-            icon: <FiServer className="text-4xl text-blue-500" />,
-            title: "Backend Development",
-            description: "Architecting robust, secure, and scalable server-side applications. I build efficient RESTful APIs and integrate complex databases using Node.js, Python, and the Django ecosystem to power dynamic applications.",
-            features: ["Node.js & Express", "Python & Django", "RESTful APIs", "Database Architecture"]
-        },
-        {
-            icon: <FiLayers className="text-4xl text-purple-500" />,
-            title: "Full Lifecycle & Architecture",
-            description: "Navigating the complete software development lifecycle from concept to deployment. I ensure end-to-end product delivery, implementing CI/CD pipelines and scalable cloud infrastructure for long-term business value.",
-            features: ["System Architecture", "Cloud Deployment (AWS)", "Docker & CI/CD", "Performance Optimization"]
-        },
-        {
-            icon: <FiDatabase className="text-4xl text-green-400" />,
-            title: "Database Management",
-            description: "Designing and scaling high-performance database architectures. I specialize in schema design, query optimization, and data modeling for both SQL (PostgreSQL/MySQL) and NoSQL (MongoDB) databases.",
-            features: ["Schema Design", "Query Optimization", "Data Migration", "MongoDB & PostgreSQL"]
-        },
-        {
-            icon: <FiActivity className="text-4xl text-yellow-400" />,
-            title: "API Strategy & Integration",
-            description: "Building robust, well-documented API ecosystems. I focus on developing secure RESTful and GraphQL endpoints that enable seamless communication between your frontend and complex backend services.",
-            features: ["RESTful API Design", "GraphQL Integration", "API Documentation", "Third-party Services"]
-        },
-        {
-            icon: <FiLock className="text-4xl text-red-500" />,
-            title: "Secure Web Solutions",
-            description: "Implementing industry-standard security protocols to protect your data and users. I integrate JWT authentication, OAuth, and SSL encryption to ensure your applications are robust against modern threats.",
-            features: ["JWT & OAuth Integration", "Data Encryption", "Secure Auth Workflows", "Vulnerability Auditing"]
-        }
-    ];
+    const services = servicesData.map(service => ({
+        ...service,
+        icon: iconMap[service.icon] || <FiMonitor className="text-4xl text-cyan-400" />
+    }));
 
     const content = (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

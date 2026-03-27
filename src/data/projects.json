@@ -1,0 +1,67 @@
+[
+    {
+      "_id": "67808fb167642a928e60aba2",
+      "title": "Ecomm - Multivendor Ecommerce Platform",
+      "description": "<p>Ecomm is a robust and scalable multivendor e-commerce platform designed to bridge the gap between vendors and customers. The application provides a comprehensive shopping experience, allowing multiple vendors to list their products across various categories while giving users a seamless interface for browsing, searching, and purchasing items. Built for performance and reliability, Ecomm features a secure authentication system, dynamic product management, and a user-friendly checkout process. The platform is engineered to handle complex operations such as inventory tracking, order management, and multivendor payouts, making it a complete solution for modern online retail businesses.</p><p><br></p><p>🛒 <strong>Multivendor Support</strong></p><p>Allows multiple sellers to create profiles and manage their own product catalogs</p><p>📦 <strong>Dynamic Product Management</strong></p><p>Vendors can add, edit, and categorize products with multiple images and detailed descriptions</p><p>🔐 <strong>Secure Authentication</strong></p><p>Robust user and vendor login systems with role-based access control</p><p>🔍 <strong>Advanced Search &amp; Filtering</strong></p><p>Intuitive search functionality to help users find products quickly</p><p>📊 <strong>Order &amp; Inventory Tracking</strong></p><p>Real-time updates on order status and stock levels for vendors</p><p>💳 <strong>Integrated Checkout</strong></p><p>Smooth and secure payment flow for a hassle-free shopping experience</p><p>📱 <strong>Responsive Design</strong></p><p>Optimized for both desktop and mobile devices for accessibility anywhere</p><p>🚀 <strong>Scalable Backend</strong></p><p>Built with enterprise-grade technology to handle high traffic and data volume</p><p><br></p><p>To provide a decentralized marketplace where vendors can grow and customers can find everything they need effortlessly.</p>",
+      "projectLanguage": "MERN Stack",
+      "image1": "https://res.cloudinary.com/dvappeqip/image/upload/v1737181236/Project-Portfolio/mqclh10t7h46sz6scszv.png",
+      "image2": "https://res.cloudinary.com/dvappeqip/image/upload/v1737181236/Project-Portfolio/nqxvo299zwpyuc8wfaac.png",
+      "image3": "https://res.cloudinary.com/dvappeqip/image/upload/v1737181236/Project-Portfolio/rfhgqb6i8kyekgf1wfws.png",
+      "image4": "https://res.cloudinary.com/dvappeqip/image/upload/v1737181236/Project-Portfolio/mmd4o1hop0j6x2r4klhe.png",
+      "image5": "https://res.cloudinary.com/dvappeqip/image/upload/v1737181236/Project-Portfolio/io6itabbyyz43zmdpvm1.png",
+      "githubLink": "https://github.com/DesaiDixit123/Ecomm",
+      "previewLink": "https://ecommclient-dbfq.onrender.com"
+    },
+    {
+      "_id": "6780909b67642a928e60aba6",
+      "title": "Bambam Cabs",
+      "description": "<p>Bambam Cabs is a modern cab booking and car rental platform designed to provide seamless, reliable, and affordable travel solutions across multiple cities. The platform enables users to book local rides, airport transfers, and outstation trips with ease, offering flexible booking options such as one-way and round-trip journeys. With a focus on user convenience, transparent pricing, and real-time booking confirmation, the system ensures a smooth and hassle-free travel experience. The application is built with a user-friendly interface, allowing customers to quickly select routes, schedule rides, and manage bookings efficiently.</p><p><br></p><p>🚖 <strong>Multiple Ride Options</strong></p><p>Local city rides, airport pickup/drop, and outstation travel available</p><p>🔄 <strong>Flexible Booking System</strong></p><p>One-way, round-trip, and hourly rental options for different needs</p><p>💰 <strong>Transparent Pricing</strong></p><p>Clear fare breakdown with no hidden charges</p><p>⚡ <strong>Instant Booking Confirmation</strong></p><p>Fast and real-time ride confirmation system</p><p>📱 <strong>User-Friendly Interface</strong></p><p>Easy navigation for booking, tracking, and managing rides</p><p>🚗 <strong>Wide Range of Vehicles</strong></p><p>Multiple car options based on budget and comfort needs</p><p>📍 <strong>Multi-City Availability</strong></p><p>Services available across multiple cities for wider reach</p><p>🔐 <strong>Reliable &amp; Safe Travel</strong></p><p>Professional drivers and well-maintained vehicles</p><p>❌ <strong>Easy Cancellation System</strong></p><p>Flexible ride cancellation options for users</p><p><br></p><p>To simplify mobility with affordable and flexible cab services</p><p>To provide safe, smooth, and convenient travel experiences for users</p>",
+      "projectLanguage": "MERN Stack",
+      "image1": "https://res.cloudinary.com/dvappeqip/image/upload/v1774353939/Project-Portfolio/eloupv8g2w71cxcn9ztk.png",
+      "image2": "https://res.cloudinary.com/dvappeqip/image/upload/v1774354143/Project-Portfolio/lei4s2hfmvgrwqxbpuch.png",
+      "image3": "https://res.cloudinary.com/dvappeqip/image/upload/v1774354144/Project-Portfolio/lecl1agae1xnzzewimow.png",
+      "image4": "https://res.cloudinary.com/dvappeqip/image/upload/v1774354146/Project-Portfolio/p901hyb5nvjnhp6hscw8.png",
+      "image5": "https://res.cloudinary.com/dvappeqip/image/upload/v1774354148/Project-Portfolio/qp8hy9zjo4yvppx1vrfa.png",
+      "githubLink": "https://github.com/DesaiDixit123/Chat_App",
+      "previewLink": "https://chat-app-client-cck1.onrender.com",
+      "liveLink": "https://bambamcabs.com/"
+    },
+    {
+      "_id": "678093e167642a928e60abb1",
+      "title": "My Todo - Task Management App",
+      "description": "A user-friendly Todo application built with an intuitive interface for creating and managing daily tasks. Features include task heading, time and date selection, detailed descriptions, and organized task listing",
+      "projectLanguage": "React Js",
+      "image1": "https://res.cloudinary.com/dvappeqip/image/upload/v1737179599/Project-Portfolio/mliuinf5vh2cj3pr4vau.png",
+      "image2": "https://res.cloudinary.com/dvappeqip/image/upload/v1737179599/Project-Portfolio/ayyyvkvsc8qqi2d7dipl.png",
+      "image3": "https://res.cloudinary.com/dvappeqip/image/upload/v1737179599/Project-Portfolio/ziiyoeuqlzdsryivm3aw.png",
+      "image4": "https://res.cloudinary.com/dvappeqip/image/upload/v1737179599/Project-Portfolio/r77kqo5xsk1ikjjmjwe2.png",
+      "image5": "https://res.cloudinary.com/dvappeqip/image/upload/v1737179599/Project-Portfolio/f6w6qndprdpemladxdth.png",
+      "githubLink": "https://github.com/DesaiDixit123/Todo-App",
+      "previewLink": "https://react-todo-app-xvpf.onrender.com/"
+    },
+    {
+      "_id": "67982d35982f0d514bbdd257",
+      "title": "Ecommerce Website --Python Django",
+      "description": "A feature-rich e-commerce website built to provide a seamless shopping experience for users. \nThis project includes functionalities such as product browsing, search, user authentication, \nshopping cart management, and secure payment integration. \n\nKey Features:\n1. Responsive design for an optimal user experience on all devices.\n2. User authentication for secure account access.\n3. Product categories, detailed product pages, and reviews.\n4. Shopping cart and wishlist functionality.\n5. Admin panel for managing products, orders, and users.\n6. Integration with payment gateways like Stripe and PayPal.\n\nTech Stack:\n- Frontend: React, Tailwind CSS, Redux for state management.\n- Backend: Node.js, Express.js.\n- Database: MongoDB.\n- Deployment: AWS and Netlify.",
+      "projectLanguage": "Python Django",
+      "image1": "https://res.cloudinary.com/dvappeqip/image/upload/v1738027035/Project-Portfolio/pjuutvk1dta3ncun1qhi.png",
+      "image2": "https://res.cloudinary.com/dvappeqip/image/upload/v1738027037/Project-Portfolio/wxdexqzoycnm59r9w4od.png",
+      "image3": "https://res.cloudinary.com/dvappeqip/image/upload/v1738027041/Project-Portfolio/i3kmmwh4vx6m7ybaf0cc.png",
+      "image4": "https://res.cloudinary.com/dvappeqip/image/upload/v1738027041/Project-Portfolio/i2mnxbli4zdvouubzpqm.png",
+      "image5": "https://res.cloudinary.com/dvappeqip/image/upload/v1738027041/Project-Portfolio/i82uwd5ca3ftn8rhcihg.png",
+      "githubLink": "https://github.com/DesaiDixit123/Ecommerce-Python-Web",
+      "previewLink": "https://dixit12345.pythonanywhere.com/"
+    },
+    {
+      "_id": "69c282ab5ea842ce8cfe22f3",
+      "title": "Book With Khushi",
+      "description": "<p><strong>Book With Khushi</strong> is a modern event space booking platform designed to help users discover and book the perfect venues and services for their events. The platform offers a wide range of categories including banquet halls, resorts, photographers, decorators, DJs, and more — all in one place.</p><p>Built using <strong>PHP Laravel</strong>, the system provides a smooth and secure booking experience with an intuitive interface. Users can easily search spaces based on category, location, and preferences, view detailed listings with pricing and capacity, and complete bookings efficiently.</p><p>The platform also supports vendor management, allowing service providers to list and manage their offerings. With a clean UI/UX, responsive design, and optimized performance, the system ensures a seamless experience across devices.</p><p>This project highlights strong expertise in <strong>full-stack development</strong>, including dynamic data handling, scalable backend architecture, and user-focused design.</p>",
+      "projectLanguage": "Php Laravel",
+      "image1": "https://res.cloudinary.com/dvappeqip/image/upload/v1774355108/Project-Portfolio/zfviogp09pe472yrsca0.png",
+      "image2": "https://res.cloudinary.com/dvappeqip/image/upload/v1774355109/Project-Portfolio/aviio4ypckdoldthfhvk.png",
+      "image3": "https://res.cloudinary.com/dvappeqip/image/upload/v1774355112/Project-Portfolio/iymkonapscq4vtodk9ok.png",
+      "image4": "https://res.cloudinary.com/dvappeqip/image/upload/v1774355112/Project-Portfolio/aj9sfmisvxovd2atlqeh.png",
+      "image5": "https://res.cloudinary.com/dvappeqip/image/upload/v1774355113/Project-Portfolio/yznhjl8ctdge7fn8f3fv.png",
+      "liveLink": "https://bookwithkhushi.com/"
+    }
+]
